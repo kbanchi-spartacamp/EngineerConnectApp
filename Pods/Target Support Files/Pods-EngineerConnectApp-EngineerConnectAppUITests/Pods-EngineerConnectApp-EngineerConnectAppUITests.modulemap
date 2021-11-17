@@ -1,0 +1,6 @@
+framework module Pods_EngineerConnectApp_EngineerConnectAppUITests {
+  umbrella header "Pods-EngineerConnectApp-EngineerConnectAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
