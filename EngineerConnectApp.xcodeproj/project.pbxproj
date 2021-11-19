@@ -19,6 +19,10 @@
 		80B1E9662740B23A002D2F81 /* EngineerConnectAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1E9652740B23A002D2F81 /* EngineerConnectAppTests.swift */; };
 		80B1E9702740B23A002D2F81 /* EngineerConnectAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1E96F2740B23A002D2F81 /* EngineerConnectAppUITests.swift */; };
 		80B1E9722740B23A002D2F81 /* EngineerConnectAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1E9712740B23A002D2F81 /* EngineerConnectAppUITestsLaunchTests.swift */; };
+		80C3DE2D274786C2005F8354 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C3DE2C274786C2005F8354 /* LoginViewController.swift */; };
+		80C3DE2F27478867005F8354 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C3DE2E27478867005F8354 /* ScheduleViewController.swift */; };
+		80C3DE312747887D005F8354 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C3DE302747887D005F8354 /* ReservationViewController.swift */; };
+		80C3DE332747888A005F8354 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C3DE322747888A005F8354 /* HistoryViewController.swift */; };
 		80E77C7E27454BB00036C0BE /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E77C7D27454BB00036C0BE /* SampleViewController.swift */; };
 		80E77C8227454DB60036C0BE /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E77C8127454DB60036C0BE /* Mentor.swift */; };
 		E1AADBAA9AD45C68988C91CF /* Pods_EngineerConnectApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB683C67BD1B04BD976E91D /* Pods_EngineerConnectApp.framework */; };
@@ -60,6 +64,10 @@
 		80B1E96B2740B23A002D2F81 /* EngineerConnectAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineerConnectAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B1E96F2740B23A002D2F81 /* EngineerConnectAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineerConnectAppUITests.swift; sourceTree = "<group>"; };
 		80B1E9712740B23A002D2F81 /* EngineerConnectAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineerConnectAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		80C3DE2C274786C2005F8354 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		80C3DE2E27478867005F8354 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		80C3DE302747887D005F8354 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
+		80C3DE322747888A005F8354 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		80E77C7D27454BB00036C0BE /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 		80E77C8127454DB60036C0BE /* Mentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentor.swift; sourceTree = "<group>"; };
 		97759E2FAECDDCD616344257 /* Pods_EngineerConnectApp_EngineerConnectAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EngineerConnectApp_EngineerConnectAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +183,10 @@
 		80E77C8027454DAB0036C0BE /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				80C3DE2C274786C2005F8354 /* LoginViewController.swift */,
+				80C3DE2E27478867005F8354 /* ScheduleViewController.swift */,
+				80C3DE302747887D005F8354 /* ReservationViewController.swift */,
+				80C3DE322747888A005F8354 /* HistoryViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -431,8 +443,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80C3DE2D274786C2005F8354 /* LoginViewController.swift in Sources */,
 				80E77C8227454DB60036C0BE /* Mentor.swift in Sources */,
+				80C3DE312747887D005F8354 /* ReservationViewController.swift in Sources */,
+				80C3DE332747888A005F8354 /* HistoryViewController.swift in Sources */,
 				80E77C7E27454BB00036C0BE /* SampleViewController.swift in Sources */,
+				80C3DE2F27478867005F8354 /* ScheduleViewController.swift in Sources */,
 				80B1E9502740B238002D2F81 /* ViewController.swift in Sources */,
 				80B1E94C2740B238002D2F81 /* AppDelegate.swift in Sources */,
 				80B1E94E2740B238002D2F81 /* SceneDelegate.swift in Sources */,
