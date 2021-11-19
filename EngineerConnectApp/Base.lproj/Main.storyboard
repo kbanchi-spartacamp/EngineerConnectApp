@@ -32,6 +32,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVI-bQ-kXR">
+                                <rect key="frame" x="171" y="632" width="73" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sample"/>
+                                <connections>
+                                    <segue destination="s3E-Zy-Oon" kind="show" id="ipE-Fn-rb1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -40,6 +49,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="72.991071428571431"/>
+        </scene>
+        <!--Sample View Controller-->
+        <scene sceneID="kWS-5o-1LS">
+            <objects>
+                <viewController id="s3E-Zy-Oon" customClass="SampleViewController" customModule="EngineerConnectApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l3S-NK-nz2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TR3-nb-Ze1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="xr2-ep-YF0">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xr2-ep-YF0" id="SGn-49-3FM">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hmQ-Rd-0wa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hmQ-Rd-0wa" firstAttribute="bottom" secondItem="TR3-nb-Ze1" secondAttribute="bottom" id="43j-68-gjy"/>
+                            <constraint firstItem="hmQ-Rd-0wa" firstAttribute="trailing" secondItem="TR3-nb-Ze1" secondAttribute="trailing" id="GfS-Fx-4LU"/>
+                            <constraint firstItem="TR3-nb-Ze1" firstAttribute="top" secondItem="hmQ-Rd-0wa" secondAttribute="top" id="HWd-C4-NE1"/>
+                            <constraint firstItem="TR3-nb-Ze1" firstAttribute="leading" secondItem="hmQ-Rd-0wa" secondAttribute="leading" id="ecb-q2-eBa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="K4y-3X-DSB"/>
+                    <connections>
+                        <outlet property="tableView" destination="TR3-nb-Ze1" id="A7J-QK-gx1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xIg-Hz-xUB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17" y="768"/>
         </scene>
         <!--予定-->
         <scene sceneID="0nv-p1-S5D">
