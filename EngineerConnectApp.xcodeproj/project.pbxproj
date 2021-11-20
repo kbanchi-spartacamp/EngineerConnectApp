@@ -25,6 +25,9 @@
 		80C3DE332747888A005F8354 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C3DE322747888A005F8354 /* HistoryViewController.swift */; };
 		80E77C7E27454BB00036C0BE /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E77C7D27454BB00036C0BE /* SampleViewController.swift */; };
 		80E77C8227454DB60036C0BE /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E77C8127454DB60036C0BE /* Mentor.swift */; };
+		80F9E14C2749268C003D07E7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F9E14B2749268C003D07E7 /* Constants.swift */; };
+		80F9E14E2749275F003D07E7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F9E14D2749275F003D07E7 /* User.swift */; };
+		80F9E15327492F58003D07E7 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F9E15227492F58003D07E7 /* Reservation.swift */; };
 		E1AADBAA9AD45C68988C91CF /* Pods_EngineerConnectApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB683C67BD1B04BD976E91D /* Pods_EngineerConnectApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +73,9 @@
 		80C3DE322747888A005F8354 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		80E77C7D27454BB00036C0BE /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 		80E77C8127454DB60036C0BE /* Mentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentor.swift; sourceTree = "<group>"; };
+		80F9E14B2749268C003D07E7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		80F9E14D2749275F003D07E7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		80F9E15227492F58003D07E7 /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 		97759E2FAECDDCD616344257 /* Pods_EngineerConnectApp_EngineerConnectAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EngineerConnectApp_EngineerConnectAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99470BC1959272AEA584862 /* Pods-EngineerConnectApp-EngineerConnectAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EngineerConnectApp-EngineerConnectAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-EngineerConnectApp-EngineerConnectAppUITests/Pods-EngineerConnectApp-EngineerConnectAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B3E44063227E252FA16A1A64 /* Pods_EngineerConnectAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EngineerConnectAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +146,7 @@
 		80B1E94A2740B238002D2F81 /* EngineerConnectApp */ = {
 			isa = PBXGroup;
 			children = (
+				80F9E14A27492650003D07E7 /* constants */,
 				80E77C8027454DAB0036C0BE /* controllers */,
 				80E77C7F27454DA20036C0BE /* models */,
 				80B1E94B2740B238002D2F81 /* AppDelegate.swift */,
@@ -176,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				80E77C8127454DB60036C0BE /* Mentor.swift */,
+				80F9E14D2749275F003D07E7 /* User.swift */,
+				80F9E15227492F58003D07E7 /* Reservation.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -189,6 +198,14 @@
 				80C3DE322747888A005F8354 /* HistoryViewController.swift */,
 			);
 			path = controllers;
+			sourceTree = "<group>";
+		};
+		80F9E14A27492650003D07E7 /* constants */ = {
+			isa = PBXGroup;
+			children = (
+				80F9E14B2749268C003D07E7 /* Constants.swift */,
+			);
+			path = constants;
 			sourceTree = "<group>";
 		};
 		B7F102E465C87B4E22EDCE79 /* Pods */ = {
@@ -444,12 +461,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				80C3DE2D274786C2005F8354 /* LoginViewController.swift in Sources */,
+				80F9E14C2749268C003D07E7 /* Constants.swift in Sources */,
 				80E77C8227454DB60036C0BE /* Mentor.swift in Sources */,
 				80C3DE312747887D005F8354 /* ReservationViewController.swift in Sources */,
 				80C3DE332747888A005F8354 /* HistoryViewController.swift in Sources */,
 				80E77C7E27454BB00036C0BE /* SampleViewController.swift in Sources */,
 				80C3DE2F27478867005F8354 /* ScheduleViewController.swift in Sources */,
 				80B1E9502740B238002D2F81 /* ViewController.swift in Sources */,
+				80F9E14E2749275F003D07E7 /* User.swift in Sources */,
+				80F9E15327492F58003D07E7 /* Reservation.swift in Sources */,
 				80B1E94C2740B238002D2F81 /* AppDelegate.swift in Sources */,
 				80B1E94E2740B238002D2F81 /* SceneDelegate.swift in Sources */,
 				80B1E9562740B238002D2F81 /* EngineerConnectApp.xcdatamodeld in Sources */,
