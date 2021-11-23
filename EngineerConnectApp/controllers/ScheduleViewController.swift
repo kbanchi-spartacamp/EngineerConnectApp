@@ -43,12 +43,27 @@ class ScheduleViewController: UIViewController {
                 self.reservations = []
                 let json = JSON(value).arrayValue
                 for reservations in json {
+                    let user = User(
+                        id: reservations["user"]["id"].int!,
+                        name: reservations["user"]["name"].string!,
+                        email: reservations["user"]["email"].string!,
+                        profile_photo_url: reservations["user"]["profile_photo_url"].string ?? ""
+                    )
+                    let mentor = Mentor(
+                        id: reservations["mentor"]["id"].int!,
+                        name: reservations["mentor"]["name"].string!,
+                        email: reservations["mentor"]["email"].string!,
+                        profile: reservations["mentor"]["profile"].string ?? "",
+                        profile_photo_url: reservations["mentor"]["profile_photo_url"].string ?? ""
+                    )
                     let reservation = Reservation(
                         id: reservations["id"].int!,
                         user_id: reservations["user_id"].int!,
                         mentor_id: reservations["mentor_id"].int!,
                         day: reservations["day"].string ?? "",
-                        start_time: reservations["start_time"].string ?? ""
+                        start_time: reservations["start_time"].string ?? "",
+                        user: user,
+                        mentor: mentor
                     )
                     self.reservations.append(reservation)
                 }
@@ -81,7 +96,7 @@ extension ScheduleViewController:UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = reservations[indexPath.row].start_time
+        cell.textLabel?.text = reservations[indexPath.row].mentor.name + " : " + reservations[indexPath.row].start_time
         return cell
     }
     

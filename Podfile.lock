@@ -1,28 +1,40 @@
 PODS:
   - Alamofire (5.4.4)
+  - AvailableHapticFeedback (1.0.2)
   - KeychainAccess (4.2.2)
   - Kingfisher (7.1.1)
+  - MultiSlider (1.11.2):
+    - AvailableHapticFeedback
+    - SweeterSwift
+  - SweeterSwift (1.1.4)
   - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
   - Alamofire
   - KeychainAccess
   - Kingfisher
+  - MultiSlider
   - SwiftyJSON
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AvailableHapticFeedback
     - KeychainAccess
     - Kingfisher
+    - MultiSlider
+    - SweeterSwift
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  AvailableHapticFeedback: 9b21b9f6d3e4566015988b5de35b40abefe6c09a
   KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
   Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
+  MultiSlider: 944d00877d371bbb5ce0a512fec517de87958775
+  SweeterSwift: 8a90cf3156f5a1b6f39785c479369a16633b5ea9
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 226f8f9caaeaa0998481db5052b367cedc95003f
+PODFILE CHECKSUM: f98ab8eaf1865176822dd606cab4a258c2533540
 
 COCOAPODS: 1.11.2

@@ -13,4 +13,6 @@ struct Reservation {
     let mentor_id: Int
     let day: String
     let start_time: String
+    let user: User
+    let mentor: Mentor
 }

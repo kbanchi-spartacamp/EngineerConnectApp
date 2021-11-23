@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2FAEF71F427D6ABDDA05EB3D /* Pods_EngineerConnectAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E44063227E252FA16A1A64 /* Pods_EngineerConnectAppTests.framework */; };
 		34220B99EC5EBB23FE69ED10 /* Pods_EngineerConnectApp_EngineerConnectAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97759E2FAECDDCD616344257 /* Pods_EngineerConnectApp_EngineerConnectAppUITests.framework */; };
+		8003D1A4274D17080073ADEE /* ReservationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8003D1A3274D17080073ADEE /* ReservationDetailViewController.swift */; };
+		8003D1A7274D22240073ADEE /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8003D1A6274D22240073ADEE /* Alert.swift */; };
+		8003D1A9274D26700073ADEE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8003D1A8274D26700073ADEE /* SettingViewController.swift */; };
+		80A746C7274CEFFA004CCA98 /* SkillCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A746C6274CEFFA004CCA98 /* SkillCategory.swift */; };
 		80B1E94C2740B238002D2F81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1E94B2740B238002D2F81 /* AppDelegate.swift */; };
 		80B1E94E2740B238002D2F81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1E94D2740B238002D2F81 /* SceneDelegate.swift */; };
 		80B1E9502740B238002D2F81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1E94F2740B238002D2F81 /* ViewController.swift */; };
@@ -22,8 +26,6 @@
 		80C3DE2D274786C2005F8354 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C3DE2C274786C2005F8354 /* LoginViewController.swift */; };
 		80C3DE2F27478867005F8354 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C3DE2E27478867005F8354 /* ScheduleViewController.swift */; };
 		80C3DE312747887D005F8354 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C3DE302747887D005F8354 /* ReservationViewController.swift */; };
-		80C3DE332747888A005F8354 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C3DE322747888A005F8354 /* HistoryViewController.swift */; };
-		80E77C7E27454BB00036C0BE /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E77C7D27454BB00036C0BE /* SampleViewController.swift */; };
 		80E77C8227454DB60036C0BE /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E77C8127454DB60036C0BE /* Mentor.swift */; };
 		80F9E14C2749268C003D07E7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F9E14B2749268C003D07E7 /* Constants.swift */; };
 		80F9E14E2749275F003D07E7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F9E14D2749275F003D07E7 /* User.swift */; };
@@ -53,6 +55,10 @@
 		139A19C75968D84D02D3853B /* Pods-EngineerConnectApp-EngineerConnectAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EngineerConnectApp-EngineerConnectAppUITests.release.xcconfig"; path = "Target Support Files/Pods-EngineerConnectApp-EngineerConnectAppUITests/Pods-EngineerConnectApp-EngineerConnectAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		446F291E08D902D43B2435ED /* Pods-EngineerConnectApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EngineerConnectApp.release.xcconfig"; path = "Target Support Files/Pods-EngineerConnectApp/Pods-EngineerConnectApp.release.xcconfig"; sourceTree = "<group>"; };
 		6168D9B072194D6D7A03F890 /* Pods-EngineerConnectApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EngineerConnectApp.debug.xcconfig"; path = "Target Support Files/Pods-EngineerConnectApp/Pods-EngineerConnectApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8003D1A3274D17080073ADEE /* ReservationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationDetailViewController.swift; sourceTree = "<group>"; };
+		8003D1A6274D22240073ADEE /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		8003D1A8274D26700073ADEE /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		80A746C6274CEFFA004CCA98 /* SkillCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillCategory.swift; sourceTree = "<group>"; };
 		80B1E9482740B238002D2F81 /* EngineerConnectApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EngineerConnectApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B1E94B2740B238002D2F81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80B1E94D2740B238002D2F81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,8 +76,6 @@
 		80C3DE2C274786C2005F8354 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		80C3DE2E27478867005F8354 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		80C3DE302747887D005F8354 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
-		80C3DE322747888A005F8354 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
-		80E77C7D27454BB00036C0BE /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 		80E77C8127454DB60036C0BE /* Mentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentor.swift; sourceTree = "<group>"; };
 		80F9E14B2749268C003D07E7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		80F9E14D2749275F003D07E7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -121,6 +125,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8003D1A5274D22170073ADEE /* commons */ = {
+			isa = PBXGroup;
+			children = (
+				8003D1A6274D22240073ADEE /* Alert.swift */,
+			);
+			path = commons;
+			sourceTree = "<group>";
+		};
 		80B1E93F2740B238002D2F81 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +158,7 @@
 		80B1E94A2740B238002D2F81 /* EngineerConnectApp */ = {
 			isa = PBXGroup;
 			children = (
+				8003D1A5274D22170073ADEE /* commons */,
 				80F9E14A27492650003D07E7 /* constants */,
 				80E77C8027454DAB0036C0BE /* controllers */,
 				80E77C7F27454DA20036C0BE /* models */,
@@ -153,7 +166,6 @@
 				80B1E94D2740B238002D2F81 /* SceneDelegate.swift */,
 				80B1E94F2740B238002D2F81 /* ViewController.swift */,
 				80B1E9512740B238002D2F81 /* Main.storyboard */,
-				80E77C7D27454BB00036C0BE /* SampleViewController.swift */,
 				80B1E9572740B23A002D2F81 /* Assets.xcassets */,
 				80B1E9592740B23A002D2F81 /* LaunchScreen.storyboard */,
 				80B1E95C2740B23A002D2F81 /* Info.plist */,
@@ -185,6 +197,7 @@
 				80E77C8127454DB60036C0BE /* Mentor.swift */,
 				80F9E14D2749275F003D07E7 /* User.swift */,
 				80F9E15227492F58003D07E7 /* Reservation.swift */,
+				80A746C6274CEFFA004CCA98 /* SkillCategory.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -195,7 +208,8 @@
 				80C3DE2C274786C2005F8354 /* LoginViewController.swift */,
 				80C3DE2E27478867005F8354 /* ScheduleViewController.swift */,
 				80C3DE302747887D005F8354 /* ReservationViewController.swift */,
-				80C3DE322747888A005F8354 /* HistoryViewController.swift */,
+				8003D1A3274D17080073ADEE /* ReservationDetailViewController.swift */,
+				8003D1A8274D26700073ADEE /* SettingViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -463,15 +477,17 @@
 				80C3DE2D274786C2005F8354 /* LoginViewController.swift in Sources */,
 				80F9E14C2749268C003D07E7 /* Constants.swift in Sources */,
 				80E77C8227454DB60036C0BE /* Mentor.swift in Sources */,
+				80A746C7274CEFFA004CCA98 /* SkillCategory.swift in Sources */,
 				80C3DE312747887D005F8354 /* ReservationViewController.swift in Sources */,
-				80C3DE332747888A005F8354 /* HistoryViewController.swift in Sources */,
-				80E77C7E27454BB00036C0BE /* SampleViewController.swift in Sources */,
+				8003D1A9274D26700073ADEE /* SettingViewController.swift in Sources */,
+				8003D1A4274D17080073ADEE /* ReservationDetailViewController.swift in Sources */,
 				80C3DE2F27478867005F8354 /* ScheduleViewController.swift in Sources */,
 				80B1E9502740B238002D2F81 /* ViewController.swift in Sources */,
 				80F9E14E2749275F003D07E7 /* User.swift in Sources */,
 				80F9E15327492F58003D07E7 /* Reservation.swift in Sources */,
 				80B1E94C2740B238002D2F81 /* AppDelegate.swift in Sources */,
 				80B1E94E2740B238002D2F81 /* SceneDelegate.swift in Sources */,
+				8003D1A7274D22240073ADEE /* Alert.swift in Sources */,
 				80B1E9562740B238002D2F81 /* EngineerConnectApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

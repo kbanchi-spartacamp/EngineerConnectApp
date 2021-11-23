@@ -1,13 +1,13 @@
 //
-//  HistoryViewController.swift
+//  SettingViewController.swift
 //  EngineerConnectApp
 //
-//  Created by 伴地慶介 on 2021/11/19.
+//  Created by 伴地慶介 on 2021/11/23.
 //
 
 import UIKit
 
-class HistoryViewController: UIViewController {
+class SettingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

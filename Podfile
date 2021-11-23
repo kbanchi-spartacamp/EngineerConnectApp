@@ -10,6 +10,7 @@ target 'EngineerConnectApp' do
   pod 'SwiftyJSON'
   pod 'KeychainAccess'
   pod 'Kingfisher'
+  pod 'MultiSlider'
 
   target 'EngineerConnectAppTests' do
     inherit! :search_paths

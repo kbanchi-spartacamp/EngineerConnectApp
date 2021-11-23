@@ -12,4 +12,5 @@ struct Mentor {
     let name: String
     let email: String
     let profile: String
+    let profile_photo_url: String
 }
