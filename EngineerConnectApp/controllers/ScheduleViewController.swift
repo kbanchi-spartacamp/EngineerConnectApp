@@ -10,11 +10,13 @@ import AuthenticationServices
 import Alamofire
 import SwiftyJSON
 import KeychainAccess
+import PKHUD
 
 class ScheduleViewController: UIViewController {
 
     let consts = Constants.shared
     var reservations:[Reservation] = []
+    var alert = Alert()
     
     @IBOutlet weak var reservationTableView: UITableView!
     
@@ -29,6 +31,7 @@ class ScheduleViewController: UIViewController {
     }
     
     func getReservationsInfo() {
+        HUD.show(.progress)
         let keychain = Keychain(service: consts.service)
         guard let accessToken = keychain["access_token"] else { return }
         guard let user_id = keychain["user_id"] else { return }
@@ -69,8 +72,13 @@ class ScheduleViewController: UIViewController {
                 }
                 print(self.reservations)
                 self.reservationTableView.reloadData()
+                HUD.hide()
+                if self.reservations.isEmpty {
+                    self.alert.showAlert(title: "No Reservation", messaage: "you have no reservation", viewController: self)
+                }
                 // fail
             case .failure(let err):
+                HUD.hide()
                 print(err.localizedDescription)
             }
         }

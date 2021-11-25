@@ -11,6 +11,7 @@ import Alamofire
 import SwiftyJSON
 import KeychainAccess
 import MultiSlider
+import PKHUD
 
 class ReservationViewController: UIViewController {
 
@@ -19,11 +20,13 @@ class ReservationViewController: UIViewController {
     var skillCategories:[SkillCategory] = []
     var day = ""
     var start_time = ""
+    var alert = Alert()
     
     let slider = MultiSlider()
     
     @IBOutlet weak var scheduleTableView: UITableView!
     @IBOutlet weak var dateSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var searchButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +50,8 @@ class ReservationViewController: UIViewController {
         setMultiSlider()
         
         setDateSegmentedControl()
+        
+        searchButton.layer.cornerRadius = 10.0
         
     }
     
@@ -91,9 +96,10 @@ class ReservationViewController: UIViewController {
     }
     
     func getMentorsScheduleInfo(skill_category_id:String, start_time:String, end_time:String, day:String, day_of_week: String, bookmark:String) {
+        HUD.show(.progress)
         let keychain = Keychain(service: consts.service)
-        guard let accessToken = keychain["access_token"] else { return }
-        guard let user_id = keychain["user_id"] else { return }
+        guard let user_id = keychain["user_id"] else { return print("no user_id")}
+        guard let accessToken = keychain["access_token"] else { return print("no token")}
         let url = URL(string: consts.baseUrl + "/mentor_schedules?user_id=" + user_id + "&skill_category_id=" + skill_category_id + "&start_time=" + start_time + "&end_time=" + end_time + "&day=" + day + "&day_of_week=" + day_of_week + "&bookmark=" + bookmark)!
         let headers: HTTPHeaders = [
             .authorization(bearerToken: accessToken)
@@ -119,8 +125,13 @@ class ReservationViewController: UIViewController {
                 self.day = day
                 self.start_time = start_time
                 self.scheduleTableView.reloadData()
+                if json.isEmpty {
+                    self.alert.showAlert(title: "No Mentor", messaage: "target mentors are not found", viewController: self)
+                }
+                HUD.hide()
                 // fail
             case .failure(let err):
+                HUD.hide()
                 print(err.localizedDescription)
             }
         }

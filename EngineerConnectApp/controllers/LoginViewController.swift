@@ -10,6 +10,7 @@ import AuthenticationServices
 import Alamofire
 import SwiftyJSON
 import KeychainAccess
+import PKHUD
 
 class LoginViewController: UIViewController {
     
@@ -19,6 +20,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,8 @@ class LoginViewController: UIViewController {
         // clear keychain
 //        let keychain = Keychain(service: consts.service)
 //        keychain["access_token"] = nil
+        
+        loginButton.layer.cornerRadius = 10.0
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,6 +46,7 @@ class LoginViewController: UIViewController {
     }
     
     func getAccessToken() {
+        HUD.show(.progress)
         let url = URL(string: consts.baseUrl + "/user/login")!
         let headers: HTTPHeaders = [
             "Content-Type": "application/json",
@@ -64,7 +69,9 @@ class LoginViewController: UIViewController {
                 //キーを設定して保存
                 keychain["access_token"] = accessToken
                 self.getUserInfo(accessToken: accessToken)
+                HUD.hide()
             case .failure(let err):
+                HUD.hide()
                 print("### ERROR ###")
                 print(err.localizedDescription)
             }

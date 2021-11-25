@@ -11,6 +11,7 @@ target 'EngineerConnectApp' do
   pod 'KeychainAccess'
   pod 'Kingfisher'
   pod 'MultiSlider'
+  pod 'PKHUD'
 
   target 'EngineerConnectAppTests' do
     inherit! :search_paths

@@ -22,6 +22,8 @@ class ReservationDetailViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var profileLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var commentTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,8 @@ class ReservationDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         getMentorInfo()
+        
+        imageView.layer.cornerRadius = 30.0
     }
     
     func getMentorInfo() {
@@ -62,6 +66,14 @@ class ReservationDetailViewController: UIViewController {
     func setMentorInfo(mentor:Mentor) {
         nameLabel.text = mentor.name
         profileLabel.text = mentor.profile
+        let imageUrl = URL(string: mentor.profile_photo_url)
+        do {
+            let data = try Data(contentsOf: imageUrl!)
+            let image = UIImage(data: data)
+            imageView.image = image
+        } catch let err {
+            print("Error: \(err.localizedDescription)")
+        }
     }
     
     @IBAction func tapReserveButton(_ sender: Any) {
@@ -73,7 +85,8 @@ class ReservationDetailViewController: UIViewController {
             "user_id": user_id,
             "mentor_id": mentor_id,
             "day": day,
-            "start_time": "20:00"
+            "start_time": "20:00",
+            "description": commentTextView.text ?? ""
         ]
         let headers :HTTPHeaders = [
             .authorization(bearerToken: accessToken)
