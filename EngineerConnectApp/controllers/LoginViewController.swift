@@ -24,6 +24,10 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // clear keychain
+//        let keychain = Keychain(service: consts.service)
+//        keychain["access_token"] = nil
     }
     
     override func viewDidAppear(_ animated: Bool) {
