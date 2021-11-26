@@ -12,8 +12,9 @@ struct Constants {
     private init() {}
     
     // API URL
-    let baseUrl = "http://localhost/api"
-    
+//    let baseUrl = "http://localhost/api"
+    let baseUrl = "https://now-conn-app.herokuapp.com/api"
+
     // service
     let service = "EngineerConnectApp"
 }

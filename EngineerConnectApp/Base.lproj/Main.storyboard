@@ -153,7 +153,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8zE-fq-HFb">
-                                <rect key="frame" x="0.0" y="304" width="414" height="509"/>
+                                <rect key="frame" x="0.0" y="414" width="414" height="399"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="3QZ-MJ-wCv">
@@ -194,7 +194,7 @@
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGl-kv-ecF">
-                                <rect key="frame" x="324" y="224" width="70" height="50"/>
+                                <rect key="frame" x="324" y="294" width="70" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="Ysr-6c-iyc"/>
@@ -207,18 +207,27 @@
                                     <action selector="tapSearchButton:" destination="eVh-hR-A6i" eventType="touchUpInside" id="Dvl-bZ-S2y"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bag-eJ-cIY">
+                                <rect key="frame" x="20" y="254" width="230" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="W6D-NN-5k0"/>
+                                    <constraint firstAttribute="height" constant="130" id="aQK-7F-8K1"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3zQ-ft-D40"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="bag-eJ-cIY" firstAttribute="leading" secondItem="3zQ-ft-D40" secondAttribute="leading" constant="20" id="3G2-7j-xOe"/>
                             <constraint firstItem="hyN-v9-oYK" firstAttribute="leading" secondItem="3zQ-ft-D40" secondAttribute="leading" constant="120" id="4pW-sH-Gl9"/>
-                            <constraint firstItem="FGl-kv-ecF" firstAttribute="top" secondItem="Ynz-4b-qcZ" secondAttribute="bottom" constant="70" id="Bap-Ex-2on"/>
+                            <constraint firstItem="FGl-kv-ecF" firstAttribute="top" secondItem="Ynz-4b-qcZ" secondAttribute="bottom" constant="140" id="Bap-Ex-2on"/>
                             <constraint firstItem="hyN-v9-oYK" firstAttribute="top" secondItem="3zQ-ft-D40" secondAttribute="top" id="CG8-G7-Mae"/>
                             <constraint firstItem="3zQ-ft-D40" firstAttribute="bottom" secondItem="8zE-fq-HFb" secondAttribute="bottom" id="J6D-L8-zaE"/>
                             <constraint firstItem="8zE-fq-HFb" firstAttribute="leading" secondItem="3zQ-ft-D40" secondAttribute="leading" id="TP9-mJ-9Fh"/>
                             <constraint firstItem="Ynz-4b-qcZ" firstAttribute="leading" secondItem="3zQ-ft-D40" secondAttribute="leading" id="VZ9-Kt-uz7"/>
                             <constraint firstItem="3zQ-ft-D40" firstAttribute="trailing" secondItem="hyN-v9-oYK" secondAttribute="trailing" constant="120" id="a6F-4C-sRV"/>
-                            <constraint firstItem="8zE-fq-HFb" firstAttribute="top" secondItem="FGl-kv-ecF" secondAttribute="bottom" constant="30" id="fC1-6o-lZz"/>
+                            <constraint firstItem="8zE-fq-HFb" firstAttribute="top" secondItem="FGl-kv-ecF" secondAttribute="bottom" constant="70" id="fC1-6o-lZz"/>
+                            <constraint firstItem="bag-eJ-cIY" firstAttribute="top" secondItem="Ynz-4b-qcZ" secondAttribute="bottom" constant="100" id="iIt-Sc-MPn"/>
                             <constraint firstItem="3zQ-ft-D40" firstAttribute="trailing" secondItem="8zE-fq-HFb" secondAttribute="trailing" id="jKu-eh-Iup"/>
                             <constraint firstItem="3zQ-ft-D40" firstAttribute="trailing" secondItem="FGl-kv-ecF" secondAttribute="trailing" constant="20" id="kNK-LZ-005"/>
                             <constraint firstItem="Ynz-4b-qcZ" firstAttribute="top" secondItem="hyN-v9-oYK" secondAttribute="bottom" constant="30" id="ubu-1t-g9M"/>
@@ -227,6 +236,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="予約" image="magnifyingglass" catalog="system" id="vK0-tb-Kck"/>
                     <connections>
+                        <outlet property="categoryPickerView" destination="bag-eJ-cIY" id="JOX-cj-lH3"/>
                         <outlet property="dateSegmentedControl" destination="Ynz-4b-qcZ" id="lnP-d4-Ui7"/>
                         <outlet property="scheduleTableView" destination="8zE-fq-HFb" id="7R1-Rv-a8G"/>
                         <outlet property="searchButton" destination="FGl-kv-ecF" id="zm4-bD-Cpb"/>

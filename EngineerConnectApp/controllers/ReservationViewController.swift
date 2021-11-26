@@ -17,6 +17,7 @@ class ReservationViewController: UIViewController {
 
     let consts = Constants.shared
     var mentors:[Mentor] = []
+    var selected_skill: String = ""
     var skillCategories:[SkillCategory] = []
     var day = ""
     var start_time = ""
@@ -24,9 +25,12 @@ class ReservationViewController: UIViewController {
     
     let slider = MultiSlider()
     
+    let data = ["A","B","C","D","E"]
+    
     @IBOutlet weak var scheduleTableView: UITableView!
     @IBOutlet weak var dateSegmentedControl: UISegmentedControl!
     @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var categoryPickerView: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +39,9 @@ class ReservationViewController: UIViewController {
         
         scheduleTableView.dataSource = self
         scheduleTableView.delegate = self
+        
+        categoryPickerView.dataSource = self
+        categoryPickerView.delegate = self
                 
         getSkillCategoryInfo()
         
@@ -67,7 +74,7 @@ class ReservationViewController: UIViewController {
         slider.valueLabelFormatter.positiveSuffix = "時"
         slider.snapStepSize = 1
         
-        slider.frame = CGRect(x:((self.view.bounds.width-320)/2),y:150,width:320,height:50)
+        slider.frame = CGRect(x:((self.view.bounds.width-320)/2),y:170,width:320,height:50)
 
         view.addSubview(slider)
     }
@@ -158,6 +165,7 @@ class ReservationViewController: UIViewController {
                     )
                     self.skillCategories.append(skillCategory)
                 }
+                self.categoryPickerView.reloadAllComponents()
                 // fail
             case .failure(let err):
                 print(err.localizedDescription)
@@ -175,7 +183,7 @@ class ReservationViewController: UIViewController {
         let day_of_week = String(selectedDay[startIndex...endIndex])
         let start_time = String(Double(slider.value[0])).replacingOccurrences(of: ".", with: ":")
         let end_time = String(Double(slider.value[1])).replacingOccurrences(of: ".", with: ":")
-        getMentorsScheduleInfo(skill_category_id:"", start_time:start_time, end_time:end_time, day:String(day), day_of_week: day_of_week, bookmark:"")
+        getMentorsScheduleInfo(skill_category_id:self.selected_skill, start_time:start_time, end_time:end_time, day:String(day), day_of_week: day_of_week, bookmark:"")
         
     }
     
@@ -215,5 +223,29 @@ extension ReservationViewController: UITableViewDelegate {
         nextVC.start_time = self.start_time
         nextVC.modalPresentationStyle = .fullScreen
         present(nextVC, animated: true, completion: nil)
+    }
+}
+
+extension ReservationViewController: UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return skillCategories.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return skillCategories[row].name
+    }
+    
+}
+
+extension ReservationViewController: UIPickerViewDelegate {
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selected_skill = String(skillCategories[row].id)
+        print(selected_skill)
     }
 }
