@@ -25,8 +25,6 @@ class ReservationViewController: UIViewController {
     
     let slider = MultiSlider()
     
-    let data = ["A","B","C","D","E"]
-    
     @IBOutlet weak var scheduleTableView: UITableView!
     @IBOutlet weak var dateSegmentedControl: UISegmentedControl!
     @IBOutlet weak var searchButton: UIButton!
@@ -207,7 +205,20 @@ extension ReservationViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = mentors[indexPath.row].name
+        let userImageView = cell.viewWithTag(1) as! UIImageView
+        userImageView.layer.cornerRadius = 30.0
+        let imageUrl = URL(string: mentors[indexPath.row].profile_photo_url)
+        do {
+            let data = try Data(contentsOf: imageUrl!)
+            let image = UIImage(data: data)
+            userImageView.image = image
+        } catch let err {
+            print("Error: \(err.localizedDescription)")
+        }
+        let nameLabel = cell.viewWithTag(2) as! UILabel
+        nameLabel.text = mentors[indexPath.row].name + " さん"
+        let descLabel = cell.viewWithTag(3) as! UILabel
+        descLabel.text = mentors[indexPath.row].profile
         return cell
     }
     
@@ -223,6 +234,10 @@ extension ReservationViewController: UITableViewDelegate {
         nextVC.start_time = self.start_time
         nextVC.modalPresentationStyle = .fullScreen
         present(nextVC, animated: true, completion: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }
 

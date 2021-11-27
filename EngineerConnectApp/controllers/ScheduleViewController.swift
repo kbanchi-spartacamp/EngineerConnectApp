@@ -25,7 +25,8 @@ class ScheduleViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         reservationTableView.dataSource = self
-        
+        reservationTableView.delegate = self
+
         getReservationsInfo()
         
     }
@@ -104,8 +105,34 @@ extension ScheduleViewController:UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = reservations[indexPath.row].mentor.name + " : " + reservations[indexPath.row].start_time
+        let userImageView = cell.viewWithTag(1) as! UIImageView
+        userImageView.layer.cornerRadius = 30.0
+        let imageUrl = URL(string: reservations[indexPath.row].mentor.profile_photo_url)
+        do {
+            let data = try Data(contentsOf: imageUrl!)
+            let image = UIImage(data: data)
+            userImageView.image = image
+        } catch let err {
+            print("Error: \(err.localizedDescription)")
+        }
+        let nameLabel = cell.viewWithTag(2) as! UILabel
+        nameLabel.text = reservations[indexPath.row].mentor.name + " さん"
+        
+        let dayLabel = cell.viewWithTag(3) as! UILabel
+        print(reservations[indexPath.row].day)
+        dayLabel.text = String(reservations[indexPath.row].day.prefix(10))
+        let startTimeLabel = cell.viewWithTag(4) as! UILabel
+        let startIndex = reservations[indexPath.row].day.index(reservations[indexPath.row].day.startIndex, offsetBy: 11)
+        let endIndex = reservations[indexPath.row].day.index(reservations[indexPath.row].day.endIndex,offsetBy: -12)
+        startTimeLabel.text = String(reservations[indexPath.row].start_time[startIndex...endIndex]) + " 〜"
         return cell
     }
+        
+}
+
+extension ScheduleViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
 }

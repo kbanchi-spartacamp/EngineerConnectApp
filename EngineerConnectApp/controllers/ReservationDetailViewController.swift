@@ -24,6 +24,8 @@ class ReservationDetailViewController: UIViewController {
     @IBOutlet weak var profileLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var commentTextView: UITextView!
+    @IBOutlet weak var reserveButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,9 @@ class ReservationDetailViewController: UIViewController {
         
         getMentorInfo()
         
+        reserveButton.layer.cornerRadius = 10.0
+        backButton.layer.cornerRadius = 10.0
+
         imageView.layer.cornerRadius = 30.0
     }
     

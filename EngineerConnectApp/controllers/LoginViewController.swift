@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
         // clear keychain
 //        let keychain = Keychain(service: consts.service)
 //        keychain["access_token"] = nil
-        
+//        
         loginButton.layer.cornerRadius = 10.0
     }
     
